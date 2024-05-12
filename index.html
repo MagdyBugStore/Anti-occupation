@@ -1,57 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> barnd with occupation </title>
-  <!-- <script type="module" crossorigin src="/assets/index.35391116.js"></script> -->
-  <!-- <link rel="stylesheet" href="/assets/index.446c3976.css"> -->
-</head>
-
-<body>
-  <!-- <div id="root"></div> -->
-  <button onclick="setNotification()">Click Me</button>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      if (!("Notification" in window)) {
-        console.log("This browser does not support desktop notifications");
-      } else if (Notification.permission !== "granted") {
-        console.log("notifications suported");
-
-        Notification.requestPermission().then(function (permission) {
-          if (permission !== "granted") {
-            console.log("Notification permission denied");
-          }
-        });
-      }
-    });
-
-    function setNotification() {
-      new Notification("Hi there!");
-
-      if (!("Notification" in window)) {
-        alert("This browser does not support desktop notifications");
-      } else if (Notification.permission === "granted") {
-        createNotification();
-      } else if (Notification.permission !== "denied") {
-        Notification.requestPermission().then(function (permission) {
-          if (permission === "granted") {
-            createNotification();
-          }
-        });
-      }
-    }
-
-    function createNotification() {
-      new Notification("Notification Alarm", {
-        body: "Time's up!",
-        icon: "https://via.placeholder.com/50", // URL to the notification icon
-      });
-    }
-
-  </script>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> barnd with occupation </title>
+    <script type="module" crossorigin src="/assets/index.3bdeb81d.js"></script>
+    <link rel="stylesheet" href="/assets/index.f5f14c41.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    
+  </body>
 </html>
